@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "opponentZone opponentPKMN"
+                "trainerPKMN trainerZone"
+                "textZone textZone";
+        }
+
+        .opponentZone {
+            grid-area: opponentZone;
+        }
+
+        .opponentPKMN {
+            grid-area: opponentPKMN;
+        }
+
+        .trainerPKMN {
+            grid-area: trainerPKMN;
+        }
+
+        .trainerZone {
+            grid-area: trainerZone;
+        }
+
+        .textZone {
+            grid-area: textZone;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="opponentZone">
+            <p>Opponent HP</p>
+        </div>
+        <div class="opponentPKMN">
+            <img id="opponentPKMN"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+                alt="Smell ya later!">
+        </div>
+        <div class="trainerPKMN">
+            <img id="trainerPKMN"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+                alt="Who will you pick?">
+        </div>
+        <div class="trainerZone">Trainer HP</div>
+        <div id="textZone" class="textZone">
+            <button onclick=bulbasaurButton()>BULBASAUR</button>
+            <button onclick=charmanderButton()>CHARMANDER</button>
+            <button onclick=squirtleButton()>SQUIRTLE</button><br>
+            <p>PKMN Trainer BLUE wants to battle!</p>
+        </div>
+    </div>
+</body>
+
+<script src="pkmn_battle.js"></script>
+
+</html>
